@@ -5,8 +5,10 @@
  */
 package com.bilisim.demo01;
 
+import com.bilisim.demo01.main.DateUtil;
 import com.bilisim.demo01.main.MainForm;
 import com.bilisim.kayıt.RegisterDialog;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +22,7 @@ public class GirisForm extends javax.swing.JFrame {
      */
     public GirisForm() {
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     /**
@@ -139,8 +142,11 @@ public class GirisForm extends javax.swing.JFrame {
         
         MainForm mainForm = new MainForm();
         mainForm.setVisible(true);
+        DateUtil.dateToStr(new Date(), "dd/MM/yyyy");
+        //String date = DateUtil.dateToStr(new Date(), "dd/MM/yyyy");
         //new MainForm().setVisible(true)
     }//GEN-LAST:event_jButton2ActionPerformed
+
 
     /**
      * @param args the command line arguments
